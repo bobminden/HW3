@@ -49,6 +49,7 @@
         cardButton.enabled = !card.isUnPlayable;
         cardButton.alpha = card.isUnPlayable ? 0.3 : 1.0;
         [cardButton setImage:(card.isFaceUp ? nil : self.cardBack) forState:UIControlStateNormal];
+        [cardButton setImageEdgeInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
     }
     self.scoreLabel.text = [NSString stringWithFormat:@"Score: %d", self.game.score];
     self.resultsLabel.text = self.game.resultsStr;
