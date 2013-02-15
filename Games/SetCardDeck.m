@@ -16,16 +16,15 @@
     
     if (self) {
         for (int symbol = 0; symbol <= 2; ++symbol) {
-            for (int count = 0; count <= 2; ++count) {
+            for (int count = 1; count <= 3; ++count) {
                 for (int color = 0; color <= 2; ++color) {
                     for (int fill = 0; fill <= 2; ++fill) {
                         SetCard *card = [[SetCard alloc] init];
-                        card.symbol = [[NSNumber alloc] initWithInt:symbol];
-                        card.count = [[NSNumber alloc] initWithInt:count];
-                        card.fill = [[NSNumber alloc] initWithInt:fill];
-                        card.color = [[NSNumber alloc] initWithInt:color];
+                        card.symbol = symbol;
+                        card.count = count;
+                        card.fill = fill;
+                        card.color = color;
                         [self addCard:card atTop:YES];
-                        
                     }
                 }
             }

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B6D91A4916CD4F32003B5C6A /* SetGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D91A4816CD4F32003B5C6A /* SetGameViewController.m */; };
+		B6D91A4C16CD62BC003B5C6A /* SetMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D91A4B16CD62BC003B5C6A /* SetMatchingGame.m */; };
+		B6D91A4E16CDBDD6003B5C6A /* images-1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B6D91A4D16CDBDD6003B5C6A /* images-1.jpeg */; };
 		B6F9445B16C6B49800F07825 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6F9445A16C6B49800F07825 /* UIKit.framework */; };
 		B6F9445D16C6B49800F07825 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6F9445C16C6B49800F07825 /* Foundation.framework */; };
 		B6F9445F16C6B49800F07825 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6F9445E16C6B49800F07825 /* CoreGraphics.framework */; };
@@ -33,6 +35,9 @@
 /* Begin PBXFileReference section */
 		B6D91A4716CD4F32003B5C6A /* SetGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetGameViewController.h; sourceTree = "<group>"; };
 		B6D91A4816CD4F32003B5C6A /* SetGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetGameViewController.m; sourceTree = "<group>"; };
+		B6D91A4A16CD62BC003B5C6A /* SetMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetMatchingGame.h; sourceTree = "<group>"; };
+		B6D91A4B16CD62BC003B5C6A /* SetMatchingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetMatchingGame.m; sourceTree = "<group>"; };
+		B6D91A4D16CDBDD6003B5C6A /* images-1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "images-1.jpeg"; sourceTree = "<group>"; };
 		B6F9445716C6B49800F07825 /* Games.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Games.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6F9445A16C6B49800F07825 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B6F9445C16C6B49800F07825 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -135,6 +140,8 @@
 				B6F9449916C741D300F07825 /* SetCardDeck.m */,
 				B6F9448A16C6B5F300F07825 /* CardGameViewController.h */,
 				B6F9448B16C6B5F300F07825 /* CardGameViewController.m */,
+				B6D91A4A16CD62BC003B5C6A /* SetMatchingGame.h */,
+				B6D91A4B16CD62BC003B5C6A /* SetMatchingGame.m */,
 				B6F9446116C6B49800F07825 /* Supporting Files */,
 			);
 			path = Games;
@@ -145,6 +152,7 @@
 			children = (
 				B6F9446216C6B49800F07825 /* Games-Info.plist */,
 				B6F9446316C6B49800F07825 /* InfoPlist.strings */,
+				B6D91A4D16CDBDD6003B5C6A /* images-1.jpeg */,
 				B6F9446616C6B49800F07825 /* main.m */,
 				B6F9446816C6B49800F07825 /* Games-Prefix.pch */,
 				B6F9448C16C6B60700F07825 /* Kids.png */,
@@ -213,6 +221,7 @@
 				B6F9447116C6B49800F07825 /* Default-568h@2x.png in Resources */,
 				B6F9447416C6B49800F07825 /* MainStoryboard.storyboard in Resources */,
 				B6F9448D16C6B60700F07825 /* Kids.png in Resources */,
+				B6D91A4E16CDBDD6003B5C6A /* images-1.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +244,7 @@
 				B6F9449716C73BB400F07825 /* SetCard.m in Sources */,
 				B6F9449A16C741D300F07825 /* SetCardDeck.m in Sources */,
 				B6D91A4916CD4F32003B5C6A /* SetGameViewController.m in Sources */,
+				B6D91A4C16CD62BC003B5C6A /* SetMatchingGame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

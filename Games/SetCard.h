@@ -10,8 +10,8 @@
 #import "Card.h"
 
 @interface SetCard : Card
-@property (strong, nonatomic) NSNumber * count;
-@property (strong, nonatomic) NSNumber * symbol;
-@property (strong, nonatomic) NSNumber * fill;
-@property (strong, nonatomic) NSNumber * color;
+@property (nonatomic) NSInteger count;
+@property (nonatomic) NSInteger symbol;
+@property (nonatomic) NSInteger fill;
+@property (nonatomic) NSInteger color;
 @end

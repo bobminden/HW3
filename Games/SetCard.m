@@ -10,6 +10,19 @@
 
 @implementation SetCard
 
++ (NSArray *)validStringSymbols {
+    return @[@"▲",@"●",@"■"];
+}
+
+- (NSString *) contents
+{
+    
+    NSArray *symbols = [SetCard validStringSymbols];
+    
+    NSString *symbolNumber = [@"" stringByPaddingToLength:self.count withString: symbols[self.symbol] startingAtIndex:0];
+    
+    return [NSString stringWithFormat:@"%@",symbolNumber];
+}
 - (int)match:(NSArray *)otherCards
 {
     if ([otherCards count] != 2) return 0;
@@ -23,10 +36,10 @@
     
     NSArray * cards = @[self, otherCards[0], otherCards[1]];
     for (SetCard *card in cards) {
-        [countSet addObject:card.count];
-        [symbolSet addObject:card.symbol];
-        [colorSet addObject:card.color];
-        [fillSet addObject:card.fill];
+        [countSet addObject:[[NSNumber alloc] initWithInt:card.count]];
+        [symbolSet addObject:[[NSNumber alloc] initWithInt:card.symbol]];
+        [colorSet addObject:[[NSNumber alloc] initWithInt:card.color]];
+        [fillSet addObject:[[NSNumber alloc] initWithInt:card.fill]];
     }
     
     if ([countSet count] == 2) score = 0;
