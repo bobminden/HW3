@@ -20,4 +20,6 @@
 @property (strong, nonatomic, readonly) NSMutableArray *cards;  // of Card
 @property (nonatomic, readonly) int score;
 @property (nonatomic, strong, readonly) NSString * resultsStr;
+@property (nonatomic, strong) NSArray * cardsInTurn;
+@property (nonatomic) int turnScore;
 @end

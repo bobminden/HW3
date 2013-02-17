@@ -59,7 +59,6 @@
     if (!card.isUnPlayable) {
         // see if flipping causes a match
         if (!card.isFaceUp) {
-            self.resultsStr = [NSString stringWithFormat:@"Flipped up %@", card.contents];
             NSLog(@"Looking for two faceup");
             // Find two other cards that are face up and playable
             NSMutableArray *faceUpCards = [[NSMutableArray alloc] init];
@@ -71,8 +70,10 @@
             }
             
             if ([faceUpCards count] == 2) {
+                
                 Card *card1 = faceUpCards[0];
                 Card *card2 = faceUpCards[1];
+                self.cardsInTurn = @[card, card1, card2];
                 int matchScore = [card match:faceUpCards];
                 NSLog(@"matchScore %d", matchScore);
                 if (matchScore == 0) {
@@ -80,8 +81,9 @@
                     self.score -= MISMATCH_PENALTY;
                     card1.faceUp = NO;
                     card2.faceUp = NO;
-                    self.resultsStr = [NSString stringWithFormat:@"%@ %@ %@ No Match. %d penalty",
-                                           card.contents, card1.contents, card2.contents, MISMATCH_PENALTY];
+                    self.turnScore = MISMATCH_PENALTY;
+                    //self.resultsStr = [NSString stringWithFormat:@"%@ %@ %@ No Match. %d penalty",
+                    //                       card.contents, card1.contents, card2.contents, MISMATCH_PENALTY];
                 } else {
                     // 3 match rank
                     matchScore *= MATCH_BONUS;
@@ -89,8 +91,9 @@
                     card.unplayable = YES;
                     card1.unplayable = YES;
                     card2.unplayable = YES;
-                    self.resultsStr =[NSString stringWithFormat:@"%@ %@ %@ match for %d points",
-                                          card.contents, card1.contents, card2.contents, matchScore];
+                    self.turnScore = matchScore;
+                    //self.resultsStr =[NSString stringWithFormat:@"%@ %@ %@ match for %d points",
+                    //                      card.contents, card1.contents, card2.contents, matchScore];
                 }
             }
         }
@@ -121,7 +124,7 @@
                                 NSLog(@"%@", card1.contents);
                                 NSLog(@"%@", card2.contents);
                                 NSLog(@"%@", card3.contents);
-                                break;
+                                return YES;
                             };
                         }
                     }

@@ -37,7 +37,6 @@
 }
 
 
-// From Joan Carles Catalan
 - (NSAttributedString *)cardAttributedContents:(Card *)card
 {
     NSArray *colorPallette = @[[UIColor redColor],[UIColor greenColor],[UIColor blueColor]];
@@ -70,10 +69,35 @@
         cardButton.alpha = card.isUnPlayable ? 0.0 : 1.0;
     }
     self.scoreLabel.text = [NSString stringWithFormat:@"Score: %d", self.game.score];
-    self.resultsLabel.text = self.game.resultsStr;
+    
+    self.resultsLabel.attributedText = [self turnResults];
+    
     if ([self.game aMatchExits] == NO) {
+
         self.resultsLabel.text = @"GAME OVER";
     }
+}
+
+- (NSAttributedString *)turnResults
+{
+    NSMutableAttributedString * result = nil;
+        
+    if ([self.game.cardsInTurn count] == 3 && self.game.turnScore != 0) {
+        result = [[self cardAttributedContents:self.game.cardsInTurn[0]] mutableCopy];
+        [result appendAttributedString:[[NSAttributedString alloc] initWithString:@" "]];
+        [result appendAttributedString:[self cardAttributedContents:self.game.cardsInTurn[1]]];
+        [result appendAttributedString:[[NSAttributedString alloc] initWithString:@" "]];
+        [result appendAttributedString:[self cardAttributedContents:self.game.cardsInTurn[2]]];
+    
+        NSString * desc;
+        if ((self.game.turnScore < 0)) {
+            desc = [NSString stringWithFormat:@" Mismatch for %d points", self.game.turnScore];
+        } else {
+            desc = [NSString stringWithFormat:@" Match for %d points", self.game.turnScore];
+        }
+        [result appendAttributedString:[[NSAttributedString alloc] initWithString:desc]];
+    }
+    return result;
 }
 
 - (void)setFlipCount:(int)flipCount
