@@ -98,4 +98,38 @@
     }
 }
 
+- (BOOL)aMatchExits
+{
+    BOOL foundOne = NO;
+    Card * card1;
+    Card * card2;
+    Card * card3;
+    
+    int count = [self.cards count];
+    for (int i = 0; i < count; ++i) {
+        card1 = self.cards[i];
+        if (! card1.isUnPlayable) {
+            for (int j = i + 1; j < count; ++j) {
+                card2 = self.cards[j];
+                if (! card2.isUnPlayable) {
+                    for (int k = j + 1; k < count; ++k) {
+                        card3 = self.cards[k];
+                        if (! card3.isUnPlayable) {
+                            if ([card1 match:@[card2,card3]] > 0) {
+                                foundOne = YES;
+                                NSLog(@" ");
+                                NSLog(@"%@", card1.contents);
+                                NSLog(@"%@", card2.contents);
+                                NSLog(@"%@", card3.contents);
+                                break;
+                            };
+                        }
+                    }
+                }
+            }
+        }
+    }
+    return foundOne;
+}
+
 @end

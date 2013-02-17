@@ -15,6 +15,7 @@
 - (void)flipCardAtIndex:(NSUInteger)index;
 
 - (Card *)cardAtIndex:(NSUInteger)index;
+- (BOOL) aMatchExits;
 
 @property (strong, nonatomic, readonly) NSMutableArray *cards;  // of Card
 @property (nonatomic, readonly) int score;

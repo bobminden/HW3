@@ -15,6 +15,7 @@
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 @property (strong, nonatomic) SetMatchingGame *game;
 @property (nonatomic) int flipCount;
+@property (strong, nonatomic)UIImage * chosenImage;
 @end
 
 @implementation SetGameViewController
@@ -54,21 +55,25 @@
 
 - (void)updateUI
 {
+    
     for (UIButton *cardButton in self.cardButtons) {
         Card *card = [self.game cardAtIndex:[self.cardButtons indexOfObject:cardButton]];
         NSAttributedString * desc = [self cardAttributedContents:card];
         [cardButton setAttributedTitle:desc forState:UIControlStateNormal];
         [cardButton setAttributedTitle:desc forState:UIControlStateSelected];
         [cardButton setAttributedTitle:desc forState:UIControlStateSelected|UIControlStateDisabled];
-        //cardButton.selected = card.isFaceUp;
+        
+        [cardButton setBackgroundImage:(card.isFaceUp ? self.chosenImage:nil) forState:UIControlStateNormal];
+        
         cardButton.selected = !card.isUnPlayable;
         cardButton.enabled = !card.isUnPlayable;
-        cardButton.alpha = card.isUnPlayable ? 0.3 : 1.0;
-      //  [cardButton setImage:(card.isFaceUp ? nil : self.cardBack) forState:UIControlStateNormal];
-        [cardButton setImageEdgeInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
+        cardButton.alpha = card.isUnPlayable ? 0.0 : 1.0;
     }
     self.scoreLabel.text = [NSString stringWithFormat:@"Score: %d", self.game.score];
     self.resultsLabel.text = self.game.resultsStr;
+    if ([self.game aMatchExits] == NO) {
+        self.resultsLabel.text = @"GAME OVER";
+    }
 }
 
 - (void)setFlipCount:(int)flipCount
@@ -94,6 +99,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.chosenImage = [UIImage imageNamed:@"images-1.jpeg"];
 	[self updateUI];
 }
 
