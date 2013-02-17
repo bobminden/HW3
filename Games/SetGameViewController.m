@@ -56,8 +56,10 @@
 {
     for (UIButton *cardButton in self.cardButtons) {
         Card *card = [self.game cardAtIndex:[self.cardButtons indexOfObject:cardButton]];
-        [cardButton setAttributedTitle:[self cardAttributedContents:card] forState:UIControlStateSelected];
-        [cardButton setAttributedTitle:[self cardAttributedContents:card] forState:UIControlStateSelected|UIControlStateDisabled];
+        NSAttributedString * desc = [self cardAttributedContents:card];
+        [cardButton setAttributedTitle:desc forState:UIControlStateNormal];
+        [cardButton setAttributedTitle:desc forState:UIControlStateSelected];
+        [cardButton setAttributedTitle:desc forState:UIControlStateSelected|UIControlStateDisabled];
         //cardButton.selected = card.isFaceUp;
         cardButton.selected = !card.isUnPlayable;
         cardButton.enabled = !card.isUnPlayable;
