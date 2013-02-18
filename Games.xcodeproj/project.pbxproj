@@ -20,7 +20,6 @@
 		B6F9446F16C6B49800F07825 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6F9446E16C6B49800F07825 /* Default@2x.png */; };
 		B6F9447116C6B49800F07825 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6F9447016C6B49800F07825 /* Default-568h@2x.png */; };
 		B6F9447416C6B49800F07825 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6F9447216C6B49800F07825 /* MainStoryboard.storyboard */; };
-		B6F9447716C6B49800F07825 /* GamesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F9447616C6B49800F07825 /* GamesViewController.m */; };
 		B6F9448D16C6B60700F07825 /* Kids.png in Resources */ = {isa = PBXBuildFile; fileRef = B6F9448C16C6B60700F07825 /* Kids.png */; };
 		B6F9448E16C6CE7900F07825 /* CardGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F9448B16C6B5F300F07825 /* CardGameViewController.m */; };
 		B6F9449016C6FE2800F07825 /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F9447F16C6B5B700F07825 /* CardMatchingGame.m */; };
@@ -52,8 +51,6 @@
 		B6F9446E16C6B49800F07825 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		B6F9447016C6B49800F07825 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B6F9447316C6B49800F07825 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		B6F9447516C6B49800F07825 /* GamesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GamesViewController.h; sourceTree = "<group>"; };
-		B6F9447616C6B49800F07825 /* GamesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GamesViewController.m; sourceTree = "<group>"; };
 		B6F9447E16C6B5B700F07825 /* CardMatchingGame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardMatchingGame.h; sourceTree = "<group>"; };
 		B6F9447F16C6B5B700F07825 /* CardMatchingGame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardMatchingGame.m; sourceTree = "<group>"; };
 		B6F9448216C6B5D600F07825 /* Card.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
@@ -122,8 +119,6 @@
 				B6F9447216C6B49800F07825 /* MainStoryboard.storyboard */,
 				B6D91A4716CD4F32003B5C6A /* SetGameViewController.h */,
 				B6D91A4816CD4F32003B5C6A /* SetGameViewController.m */,
-				B6F9447516C6B49800F07825 /* GamesViewController.h */,
-				B6F9447616C6B49800F07825 /* GamesViewController.m */,
 				B6F9447E16C6B5B700F07825 /* CardMatchingGame.h */,
 				B6F9447F16C6B5B700F07825 /* CardMatchingGame.m */,
 				B6F9448216C6B5D600F07825 /* Card.h */,
@@ -240,7 +235,6 @@
 				B6F9448E16C6CE7900F07825 /* CardGameViewController.m in Sources */,
 				B6F9446716C6B49800F07825 /* main.m in Sources */,
 				B6F9446B16C6B49800F07825 /* GamesAppDelegate.m in Sources */,
-				B6F9447716C6B49800F07825 /* GamesViewController.m in Sources */,
 				B6F9449716C73BB400F07825 /* SetCard.m in Sources */,
 				B6F9449A16C741D300F07825 /* SetCardDeck.m in Sources */,
 				B6D91A4916CD4F32003B5C6A /* SetGameViewController.m in Sources */,

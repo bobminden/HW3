@@ -22,4 +22,5 @@
 @property (nonatomic, strong, readonly) NSString * resultsStr;
 @property (nonatomic, strong) NSArray * cardsInTurn;
 @property (nonatomic) int turnScore;
+@property (nonatomic, strong) NSArray * matchedCards;
 @end

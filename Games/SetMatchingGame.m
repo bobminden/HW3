@@ -55,7 +55,7 @@
 - (void)flipCardAtIndex:(NSUInteger)index
 {
     Card *card = [self cardAtIndex:index];
-    
+    self.cardsInTurn = nil;
     if (!card.isUnPlayable) {
         // see if flipping causes a match
         if (!card.isFaceUp) {
@@ -124,6 +124,7 @@
                                 NSLog(@"%@", card1.contents);
                                 NSLog(@"%@", card2.contents);
                                 NSLog(@"%@", card3.contents);
+                                self.matchedCards = @[card1,card2,card3];
                                 return YES;
                             };
                         }

@@ -24,7 +24,7 @@
 {
     if (!_game) {
         _game = [[SetMatchingGame alloc] initWithCardCount:[self.cardButtons count]
-                                                  usingDeck:[[SetCardDeck alloc]init]];
+                                                 usingDeck:[[SetCardDeck alloc]init]];
     }
     return _game;
 }
@@ -73,15 +73,14 @@
     self.resultsLabel.attributedText = [self turnResults];
     
     if ([self.game aMatchExits] == NO) {
-
         self.resultsLabel.text = @"GAME OVER";
     }
 }
 
 - (NSAttributedString *)turnResults
 {
-    NSMutableAttributedString * result = nil;
-        
+    NSMutableAttributedString * result;
+    result = [[NSMutableAttributedString alloc] initWithString:@" "];
     if ([self.game.cardsInTurn count] == 3 && self.game.turnScore != 0) {
         result = [[self cardAttributedContents:self.game.cardsInTurn[0]] mutableCopy];
         [result appendAttributedString:[[NSAttributedString alloc] initWithString:@" "]];
@@ -104,6 +103,19 @@
 {
     _flipCount = flipCount;
     self.flipsLabel.text = [NSString stringWithFormat:@"Flips: %d", self.flipCount];
+}
+
+- (IBAction)showMatch:(UIButton *)sender
+{
+    if ([self.game aMatchExits] == YES) {
+        NSMutableAttributedString * result = nil;
+        result = [[self cardAttributedContents:self.game.matchedCards[0]] mutableCopy];
+        [result appendAttributedString:[[NSAttributedString alloc] initWithString:@" "]];
+        [result appendAttributedString:[self cardAttributedContents:self.game.matchedCards[1]]];
+        [result appendAttributedString:[[NSAttributedString alloc] initWithString:@" "]];
+        [result appendAttributedString:[self cardAttributedContents:self.game.matchedCards[2]]];
+        self.resultsLabel.attributedText = result;
+    }
 }
 
 - (IBAction)newDeal:(UIButton *)sender
