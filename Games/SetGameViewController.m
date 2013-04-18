@@ -96,6 +96,7 @@
         }
         [result appendAttributedString:[[NSAttributedString alloc] initWithString:desc]];
     }
+    NSLog(@"%@", result);
     return result;
 }
 
