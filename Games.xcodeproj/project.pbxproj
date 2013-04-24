@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35E876B41728927500D9588B /* 06-magnify.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E876B21728927500D9588B /* 06-magnify.png */; };
+		35E876B51728927500D9588B /* 06-magnify@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E876B31728927500D9588B /* 06-magnify@2x.png */; };
 		B6D91A4916CD4F32003B5C6A /* SetGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D91A4816CD4F32003B5C6A /* SetGameViewController.m */; };
 		B6D91A4C16CD62BC003B5C6A /* SetMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D91A4B16CD62BC003B5C6A /* SetMatchingGame.m */; };
 		B6D91A4E16CDBDD6003B5C6A /* images-1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B6D91A4D16CDBDD6003B5C6A /* images-1.jpeg */; };
@@ -32,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35E876B21728927500D9588B /* 06-magnify.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "06-magnify.png"; sourceTree = "<group>"; };
+		35E876B31728927500D9588B /* 06-magnify@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "06-magnify@2x.png"; sourceTree = "<group>"; };
 		B6D91A4716CD4F32003B5C6A /* SetGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetGameViewController.h; sourceTree = "<group>"; };
 		B6D91A4816CD4F32003B5C6A /* SetGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetGameViewController.m; sourceTree = "<group>"; };
 		B6D91A4A16CD62BC003B5C6A /* SetMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetMatchingGame.h; sourceTree = "<group>"; };
@@ -137,6 +141,8 @@
 				B6F9448B16C6B5F300F07825 /* CardGameViewController.m */,
 				B6D91A4A16CD62BC003B5C6A /* SetMatchingGame.h */,
 				B6D91A4B16CD62BC003B5C6A /* SetMatchingGame.m */,
+				35E876B21728927500D9588B /* 06-magnify.png */,
+				35E876B31728927500D9588B /* 06-magnify@2x.png */,
 				B6F9446116C6B49800F07825 /* Supporting Files */,
 			);
 			path = Games;
@@ -217,6 +223,8 @@
 				B6F9447416C6B49800F07825 /* MainStoryboard.storyboard in Resources */,
 				B6F9448D16C6B60700F07825 /* Kids.png in Resources */,
 				B6D91A4E16CDBDD6003B5C6A /* images-1.jpeg in Resources */,
+				35E876B41728927500D9588B /* 06-magnify.png in Resources */,
+				35E876B51728927500D9588B /* 06-magnify@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
