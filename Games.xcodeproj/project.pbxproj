@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		35E876B41728927500D9588B /* 06-magnify.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E876B21728927500D9588B /* 06-magnify.png */; };
 		35E876B51728927500D9588B /* 06-magnify@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E876B31728927500D9588B /* 06-magnify@2x.png */; };
+		B6CC4F511729700E009E3906 /* GitTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6CC4F501729700E009E3906 /* GitTestViewController.m */; };
 		B6D91A4916CD4F32003B5C6A /* SetGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D91A4816CD4F32003B5C6A /* SetGameViewController.m */; };
 		B6D91A4C16CD62BC003B5C6A /* SetMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D91A4B16CD62BC003B5C6A /* SetMatchingGame.m */; };
 		B6D91A4E16CDBDD6003B5C6A /* images-1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B6D91A4D16CDBDD6003B5C6A /* images-1.jpeg */; };
@@ -36,6 +37,8 @@
 /* Begin PBXFileReference section */
 		35E876B21728927500D9588B /* 06-magnify.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "06-magnify.png"; sourceTree = "<group>"; };
 		35E876B31728927500D9588B /* 06-magnify@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "06-magnify@2x.png"; sourceTree = "<group>"; };
+		B6CC4F4F1729700E009E3906 /* GitTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GitTestViewController.h; path = ../GitTestViewController.h; sourceTree = "<group>"; };
+		B6CC4F501729700E009E3906 /* GitTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GitTestViewController.m; path = ../GitTestViewController.m; sourceTree = "<group>"; };
 		B6D91A4716CD4F32003B5C6A /* SetGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetGameViewController.h; sourceTree = "<group>"; };
 		B6D91A4816CD4F32003B5C6A /* SetGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetGameViewController.m; sourceTree = "<group>"; };
 		B6D91A4A16CD62BC003B5C6A /* SetMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetMatchingGame.h; sourceTree = "<group>"; };
@@ -125,6 +128,8 @@
 				B6D91A4816CD4F32003B5C6A /* SetGameViewController.m */,
 				B6F9447E16C6B5B700F07825 /* CardMatchingGame.h */,
 				B6F9447F16C6B5B700F07825 /* CardMatchingGame.m */,
+				B6CC4F4F1729700E009E3906 /* GitTestViewController.h */,
+				B6CC4F501729700E009E3906 /* GitTestViewController.m */,
 				B6F9448216C6B5D600F07825 /* Card.h */,
 				B6F9448316C6B5F300F07825 /* Card.m */,
 				B6F9448416C6B5F300F07825 /* Deck.h */,
@@ -247,6 +252,7 @@
 				B6F9449A16C741D300F07825 /* SetCardDeck.m in Sources */,
 				B6D91A4916CD4F32003B5C6A /* SetGameViewController.m in Sources */,
 				B6D91A4C16CD62BC003B5C6A /* SetMatchingGame.m in Sources */,
+				B6CC4F511729700E009E3906 /* GitTestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
